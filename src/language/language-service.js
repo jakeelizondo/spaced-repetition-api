@@ -69,12 +69,6 @@ const LanguageService = {
   async updateWordsFromList(db, wordsArray) {
     for (let i = 0; i < wordsArray.length; i++) {
       await db('word').where('id', '=', wordsArray[i].id).update(wordsArray[i]);
-      console.log(
-        db('word')
-          .where('id', '=', wordsArray[i].id)
-          .update(wordsArray[i])
-          .toSQL()
-      );
     }
     return;
   },
