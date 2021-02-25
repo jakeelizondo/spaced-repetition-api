@@ -97,7 +97,7 @@ languageRouter.post('/guess', jsonBodyParser, async (req, res, next) => {
     };
 
     // compare the guess to the word at the current head of the list
-    console.log(guess, wordsList.head.value.translation);
+
     if (guess === wordsList.head.value.translation) {
       // if correct, double head M value
       wordsList.head.value.memory_value *= 2;

@@ -135,6 +135,7 @@ class LinkedList {
     // if currNode is null you hit the end of the list
     if (currNode === null) {
       console.log('item not found');
+      return null;
     } else {
       //otherwise, set the previous node to point to the next node, dropping out the node to delete
       previousNode.next = currNode.next;
